@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>$28.1M Morrissey Manor | Historic Notre Dame Investment Property</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rare opportunity: Historic 95-unit Gothic residence hall at University of Notre Dame. $28.1M | 65,000 sq ft | 4.97% Cap Rate" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --nd-blue: #0C2340;
+      --nd-gold: #C99700;
+      --bg-cream: #FAF9F6;
+      --text-dark: #1a202c;
+      --text-muted: #4a5568;
+      --border-light: #e2e8f0;
+      --success: #10b981;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    /* Sticky Header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-header {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--nd-blue);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: var(--nd-blue);
+      color: white;
+      box-shadow: 0 4px 12px rgba(12, 35, 64, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #1a3a5f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(12, 35, 64, 0.4);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--nd-blue);
+      border: 2px solid var(--nd-blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--nd-blue);
+      color: white;
+    }
+
+    /* Hero Image Carousel */
+    .hero-carousel {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2rem 0;
+    }
+
+    .main-image-container {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .main-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+      padding: 3rem 2.5rem;
+      color: white;
+    }
+
+    .property-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .property-address {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background: var(--success);
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Quick Stats Bar */
+    .stats-bar {
+      max-width: 1400px;
+      margin: -3rem auto 0;
+      padding: 0 2rem 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .stats-container {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      border-right: 1px solid var(--border-light);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--nd-blue);
+    }
+
+    /* Content Section */
+    .content-wrapper {
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--nd-blue);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--nd-gold);
+      display: inline-block;
+    }
+
+    .description-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Photo Gallery Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .photo-grid-item {
+      position: relative;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .photo-grid-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: auto;
+    }
+
+    .photo-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-grid-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .photo-grid-item:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 1.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Features List */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .feature-item:hover {
+      background: #e8f4f8;
+      transform: translateX(5px);
+    }
+
+    .feature-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--nd-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    /* Info Pills */
+    .info-pills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-pill {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .info-pill:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(12, 35, 64, 0.15);
+    }
+
+    .pill-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .pill-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--nd-blue);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Agent Card */
+    .agent-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 2px solid var(--nd-gold);
+    }
+
+    .agent-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .agent-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--nd-gold);
+      margin: 0 auto 1.5rem;
+      display: block;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .agent-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--nd-blue);
+      margin-bottom: 0.25rem;
+    }
+
+    .agent-title {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .contact-item:hover {
+      background: var(--nd-blue);
+      color: white;
+    }
+
+    .contact-item:hover a {
+      color: white;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--nd-blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item:hover .contact-icon {
+      background: var(--nd-gold);
+    }
+
+    .contact-item a {
+      color: var(--nd-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 1.25rem;
+      background: var(--nd-blue);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(12, 35, 64, 0.3);
+    }
+
+    .cta-button:hover {
+      background: var(--nd-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 151, 0, 0.4);
+    }
+
+    /* Financial Box */
+    .financial-box {
+      background: linear-gradient(135deg, #0c2340 0%, #1a3a5f 100%);
+      border-radius: 16px;
+      padding: 2.5rem;
+      color: white;
+    }
+
+    .financial-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: white;
+    }
+
+    .financial-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 1.05rem;
+    }
+
+    .financial-row:last-child {
+      border-bottom: none;
+      padding-top: 1.5rem;
+      margin-top: 0.5rem;
+      border-top: 2px solid var(--nd-gold);
+    }
+
+    .financial-label {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .financial-value {
+      font-weight: 700;
+      color: white;
+    }
+
+    .financial-row:last-child .financial-value {
+      color: var(--nd-gold);
+      font-size: 1.3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+      
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .property-title {
+        font-size: 2rem;
+      }
+      
+      .price-header {
+        font-size: 1.5rem;
+      }
+      
+      .main-image-container {
+        height: 400px;
+      }
+      
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .photo-grid-item:first-child {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .info-pills {
+        grid-template-columns: 1fr;
+      }
+      
+      .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="header-content">
+      <div class="price-header">$28,100,000</div>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-outline">Contact Agent</a>
+        <a href="#financials" class="btn btn-primary">View Financials</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="hero-carousel">
+    <div class="main-image-container">
+      <span class="status-badge">● ACTIVE LISTING</span>
+      <img src="Morrissey-Listing/exterior.jpg.jpeg" alt="Morrissey Manor Exterior">
+      <div class="image-overlay">
+        <h1 class="property-title">Morrissey Manor</h1>
+        <p class="property-address">📍 100 Morrissey Hall, Notre Dame, IN 46556</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-label">Square Footage</div>
+        <div class="stat-value">65,000</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Total Units</div>
+        <div class="stat-value">95</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Cap Rate</div>
+        <div class="stat-value">4.97%</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Annual NOI</div>
+        <div class="stat-value">$1.4M</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Year Built</div>
+        <div class="stat-value">1925</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <!-- Left Column -->
+    <div class="main-content">
+      
+      <!-- Property Overview -->
+      <div class="section-card">
+        <h2 class="section-title">Property Overview</h2>
+        <p class="description-text">
+          <strong>Morrissey Manor</strong> stands as one of the most iconic residence halls on the University of Notre Dame campus. Originally completed in 1925, this historic Gothic structure has been thoughtfully modernized through two major renovation phases in 1997–1998 and 2018–2019, preserving its architectural heritage while upgrading student accommodations and building systems to contemporary standards.
+        </p>
+        <p class="description-text">
+          The property encompasses approximately <strong>65,000 square feet</strong> and houses <strong>95 residential units</strong> across a diverse mix of singles, doubles, triples, quads, and four premium suite apartments featuring private living areas and bathrooms. The Manor's amenity package includes multiple lounge spaces, dedicated study areas, full kitchens, a fitness facility, private chapel, and "Yaz's," the widely acclaimed student-run restaurant that serves as a unique revenue-generating amenity.
+        </p>
+        <p class="description-text">
+          With its distinguished façade, expansive landscaped front lawn, and generous outdoor patio, Morrissey Manor combines architectural distinction, resident comfort, and prime campus positioning into a compelling institutional-grade investment opportunity.
+        </p>
+
+        <div class="info-pills">
+          <div class="info-pill">
+            <div class="pill-label">Renovations</div>
+            <div class="pill-value">1997–98, 2018–19</div>
+          </div>
+          <div class="info-pill">
+            <div class="pill-label">Building Floors</div>
+            <div class="pill-value">4 Levels</div>
+          </div>
+          <div class="info-pill">
+            <div class="pill-label">Occupancy</div>
+            <div class="pill-value">≈250 Students</div>
+          </div>
+          <div class="info-pill">
+            <div class="pill-label">Location</div>
+            <div class="pill-value">South Quad</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      <div class="section-card">
+        <h2 class="section-title">Property Gallery</h2>
+        <div class="photo-grid">
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/chapel.jpg.jpeg" alt="Chapel">
+            <div class="photo-caption">Manor Chapel</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/room1.jpg.jpeg" alt="Student Room">
+            <div class="photo-caption">Student Room</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/lounge1.jpg.jpeg" alt="Gaming Lounge">
+            <div class="photo-caption">Gaming Lounge</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/lounge2.jpg.jpeg" alt="Main Lounge">
+            <div class="photo-caption">Main Lounge</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/study.jpg.jpeg" alt="Study Area">
+            <div class="photo-caption">Study Area</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/recreation.jpg.jpeg" alt="Recreation">
+            <div class="photo-caption">Recreation Room</div>
+          </div>
+          <div class="photo-grid-item">
+            <img src="Morrissey-Listing/kitchen.jpg.jpeg" alt="Kitchen">
+            <div class="photo-caption">Yaz's Kitchen</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Investment Highlights -->
+      <div class="section-card">
+        <h2 class="section-title">Investment Highlights</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Historic 1925 construction with extensive modern updates</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Part of Notre Dame's prestigious "Gold Coast" residence hall collection</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Comprehensive amenity package including unique revenue-generating restaurant</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Prime South Quad location with exceptional campus connectivity</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Stable, creditworthy tenant base with historically minimal vacancy</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Substantial barriers to entry in this protected campus market</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Strong rent growth potential tied to university enrollment trends</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">Institutional-grade asset with long-term stable returns</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Building Amenities -->
+      <div class="section-card">
+        <h2 class="section-title">Building Amenities</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Modern fitness center</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Multiple laundry facilities</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">High-speed internet throughout</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Outdoor patio with grilling area</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Sand volleyball court</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Private chapel</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Elevator access to all floors</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Two full kitchens & two half kitchens</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Common lounge on every floor</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Dedicated study lounges</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">Two bathrooms per floor</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">●</div>
+            <div class="feature-text">"Yaz's" student-run restaurant</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="section-card">
+        <h2 class="section-title">Location & Market Position</h2>
+        <p class="description-text">
+          Morrissey Manor occupies a premier position on the western perimeter of Notre Dame's historic South Quad, commonly referred to as the "Gold Coast" for its collection of distinguished residence halls. The property benefits from exceptional walkability to major campus destinations including the Rockne Memorial athletic center, South Dining Hall, LaFortune Student Center, the Basilica of the Sacred Heart, and the iconic Main Building.
+        </p>
+        <p class="description-text">
+          Residents enjoy immediate access to academic facilities, dining options, and Notre Dame Stadium. The broader South Bend market provides additional amenities with downtown South Bend, regional retail centers, and South Bend International Airport all within convenient driving distance. This central, highly connected location ensures consistent demand from the university's stable student population.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar">
+      
+      <!-- Agent Card -->
+      <div class="agent-card" id="contact">
+        <div class="agent-header">
+          <img src="Morrissey-Listing/liam.jpg" alt="Liam Carmody" class="agent-photo">
+          <div class="agent-name">Liam Carmody</div>
+          <div class="agent-title">Senior Vice President</div>
+          <div class="agent-title" style="color: var(--nd-blue); font-weight: 600;">Manorite Realty Group</div>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <a href="mailto:lcarmody@nd.edu">lcarmody@nd.edu</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <a href="tel:+15743006449">(574) 300-6449</a>
+          </div>
+        </div>
+
+        <button class="cta-button">Schedule a Tour</button>
+        <button class="cta-button" style="background: white; color: var(--nd-blue); border: 2px solid var(--nd-blue); margin-top: 1rem;">Request Information</button>
+      </div>
+
+      <!-- Financial Summary -->
+      <div class="section-card" id="financials">
+        <h2 class="section-title">Financial Analysis</h2>
+        <div class="financial-box">
+          <div class="financial-title">Income & Valuation</div>
+          <div class="financial-row">
+            <span class="financial-label">Operating Expenses</span>
+            <span class="financial-value">$327,650</span>
+          </div>
+          <div class="financial-row">
+            <span class="financial-label">Net Operating Income</span>
+            <span class="financial-value">$1,396,350</span>
+          </div>
+          <div class="financial-row">
+            <span class="financial-label">Market Cap Rate</span>
+            <span class="financial-value">4.97%</span>
+          </div>
+          <div class="financial-row">
+            <span class="financial-label">Property Value</span>
+            <span class="financial-value">$28,100,000</span>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+          <strong>Valuation Method:</strong> Direct Capitalization<br>
+          Formula: NOI ÷ Cap Rate = Value<br>
+          $1,396,350 ÷ 0.0497 = $28,100,000
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
+          Complete financial statements, rent rolls, and operating history available upon execution of confidentiality agreement.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="background: var(--nd-blue); color: white; padding: 3rem 2rem; text-align: center; margin-top: 4rem;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Morrissey Manor</h3>
+      <p style="opacity: 0.9; margin-bottom: 0.5rem;">100 Morrissey Hall, Notre Dame, IN 46556</p>
+      <p style="opacity: 0.8; font-size: 0.9rem;">Exclusively Listed by Manorite Realty Group</p>
+      <p style="opacity: 0.6; font-size: 0.85rem; margin-top: 1.5rem; font-style: italic;">
+        This listing is a student academic project and does not represent an actual commercial offering.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
